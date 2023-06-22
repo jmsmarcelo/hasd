@@ -1,2 +1,2 @@
-# hasd
-Hinário Adventista do Sétimo dia
+# Hinário Adventista do Sétimo Dia
+Voz + Playback
