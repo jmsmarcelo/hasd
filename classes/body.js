@@ -16,7 +16,5 @@ objs.srcAud.addEventListener('timeupdate', () => {
 });
 objs.srcAud.addEventListener('ended', () => {
     objs.hymnCc.innerHTML = "Hinário<br>Adventista<br>do Sétimo Dia";
-    stopPlay();
-
-    if(rndAll) rndHymnAll();
+    if(rndAll) rndHymnAll(); else stopPlay();
 });
