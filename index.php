@@ -8,19 +8,19 @@
     <title>Hinário Adventista</title>
     <?php
         require_once('classes/hymns.php');
-        if(preg_match("/.*h(\d{3}).*/", $_SERVER['REQUEST_URI']))
+        if(preg_match("/.*h(\d{3}).*/", $_SERVER['REQUEST_URI'])) {
             $g_hymn = preg_replace("/.*h(\d{3}).*/", "$1", $_SERVER['REQUEST_URI']);
-        else $g_hymn = '';
+            if(intval($g_hymn > sizeof($hymns))) $g_hymn = '';
+        } else $g_hymn = '';
         echo '<meta property="og:image" content="'. $_SERVER['HTTP_HOST']. '/classes/images/logo-hasd_logo.png">'.
             '<script>'.
             "var hymns = ". json_encode($hymns). ",\n".
             "gHymn = \"". $g_hymn. "\";\n".
             '</script>'.
-            '<meta name="description" content="'. ($g_hymn != "" ? $hymns[$g_hymn]['tt'] : ""). '">';
+            '<meta name="description" content="'. ($g_hymn != "" ? $hymns[$g_hymn]['tt'] : "Playback/+Voz"). '">';
     ?>
     <script src="classes/elems.js"></script>
     <script src="classes/funcs.js"></script>
-    
 </head>
 <body>
     <header></header>

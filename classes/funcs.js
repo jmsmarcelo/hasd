@@ -20,6 +20,58 @@ function setPage(e, r) {
     }
 }
 
+function startPlay() {
+    objs.srcAud.play().then(() => {
+        objs.btnPlay.onclick = pausePlay;
+        objs.btnPlay.value = "♫ Pausar";
+        objs.btnRnd.onclick = stopPlay
+        objs.btnRnd.value = "♫ Parar";
+        objs.btnRndAll.disabled = true;
+    }).catch(() => {
+        alert("Ouve error ao reproduzir o áudio!")
+    });
+}
+function pausePlay() {
+    objs.srcAud.pause();
+    objs.btnPlay.onclick = startPlay;
+    objs.btnPlay.value = "♫ Tocar";
+}
+function stopPlay() {
+    pausePlay();
+    objs.srcAud.currentTime = 0;
+    objs.btnRnd.onclick = stopPlay;
+    objs.btnRnd.onclick = rndHymn;
+    objs.btnRnd.value = "♫ Aleatório";
+    objs.btnRndAll.disabled = false;
+    if(rndAll) {
+        rndHymns = [];
+        rndAll = false;
+        objs.hymnInfRnd.innerHTML = "";
+        objs.autoPlay.checked = autoPlay;
+    }
+
+}
+function rndHymn() {
+    let rnd = Math.floor(Math.random() * hymnsK.length - 1);
+    gHymn = hymnsK[rnd];
+    setPlayer(gHymn);
+}
+function rndHymnAll() {
+    if(rndHymns.length == 0)
+        rndHymns = hymnsK;
+
+    let rnd = Math.floor(Math.random() * rndHymns.length - 1);
+    gHymn = rndHymns[rnd];
+    rndHymns = rndHymns.filter((h) => (h != rndHymns[rnd]));
+    objs.autoPlay.checked = rndAll = true;
+    objs.hymnInfRnd.innerHTML = "Todos Aleatórios | restam " + rndHymns.length;
+    setPlayer(gHymn);
+    if(rndHymns.length == 0) {
+        bjs.hymnInfRnd.innerHTML = "";
+        rndAll = false;
+    }
+}
+
 function setPlayer(n) {
     gHymn = n;
     let aud = "classes/audios/" + setAud(n);
@@ -28,18 +80,16 @@ function setPlayer(n) {
     objs.hymnOt.innerHTML = hymns[n].ot;
     objs.hymnCr.innerHTML = hymns[n].cr;
     objs.hymnCc.innerHTML = "Hinário<br>Adventista<br>do Sétimo Dia";
-    objs.hymnInfRnd.innerHTML = "Aleatório | resta 99%";
     objs.hymnBv.innerHTML = hymns[n].bv;
-    if(objs.autoPlay.checked) objs.srcAud.play();
+    if(objs.autoPlay.checked) startPlay();
 
 }
 function setAud(n) {
     if(objs.audModVo.checked) return n + ".mp4";
     return n + "_pb.mp4";
 }
-function btnsAudPlay() {
-    objs.btnPlay.onclick = (() => { objs.srcAud.play(); });
-
+function setAutoPlay() {
+    autoPlay = objs.autoPlay.checked;
 }
 
 function fltHymnsList() {
@@ -56,8 +106,8 @@ function fltHymnsList() {
         }
         i++;
     }
+    hymnsFltList(objs.findHymn.value);
 }
-
 function hymnsFltList(hf) {
     hf = fixChar(hf);
     objs.listHymns.innerHTML = "";
@@ -74,23 +124,6 @@ function hymnsFltList(hf) {
             objs.listHymns.appendChild(li);
         }
     });
-}
-function rndHymnAll() {
-    rndAll = true;
-    if(rndHymns.length == 0)
-        rndHymns = hymnsK;
-    let rnd = Math.floor(Math.random() * rndHymns.length - 1);
-    gHymn = rndHymns[rnd];
-    console.log(rndHymns[rnd]);
-    rndHymns.slice(rnd, 1);
-    objs.autoPlay.checked = true;
-    setPlayer(gHymn);
-    if(rndHymns.length == 0) rndAll = false;
-}
-function rndHymn() {
-    let rnd = Math.floor(Math.random() * hymnsK.length - 1);
-    gHymn = hymnsK[rnd];
-    setPlayer(gHymn);
 }
 
 function fixChar(c){

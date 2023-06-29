@@ -58,8 +58,8 @@ main > section > div > p {
     width: 100%;
     bottom: 10%;
     font-family: 'Lilita One', cursive;
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 45px;
+    line-height: 45px;
     color: #ffffff;
     text-shadow: var(--tt);
 }
