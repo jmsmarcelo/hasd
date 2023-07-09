@@ -1,6 +1,6 @@
 # Hinário Adventista do Sétimo Dia - HTML Player
 
-## >> [Live Beta Version](http://www.jmsmarcelo.ultihost.net/) <<
+## >> [Live Beta Version](https://bit.ly/HASD) <<
 ### Elementos autogerados com o JavaScript Puro
 
 Voz + Playback
