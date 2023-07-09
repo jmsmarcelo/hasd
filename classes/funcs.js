@@ -21,10 +21,10 @@ function setPage(e, r) {
 }
 
 function startPlay() {
-    objs.srcAud.play().then(() => {
+    audPlay.play().then(() => {
         objs.btnPlay.onclick = pausePlay;
         objs.btnPlay.value = "♫ Pausar";
-        objs.btnRnd.onclick = stopPlay
+        objs.btnRnd.onclick = resetPlayer;
         objs.btnRnd.value = "♫ Parar";
         objs.btnRndAll.disabled = true;
     }).catch(() => {
@@ -32,24 +32,24 @@ function startPlay() {
     });
 }
 function pausePlay() {
-    objs.srcAud.pause();
+    audPlay.pause();
     objs.btnPlay.onclick = startPlay;
     objs.btnPlay.value = "♫ Tocar";
 }
 function stopPlay() {
     pausePlay();
-    objs.srcAud.currentTime = 0;
-    objs.btnRnd.onclick = stopPlay;
+    audPlay.currentTime = 0;
     objs.btnRnd.onclick = rndHymn;
     objs.btnRnd.value = "♫ Aleatório";
     objs.btnRndAll.disabled = false;
-    if(rndAll) {
-        rndHymns = [];
-        rndAll = false;
-        objs.hymnInfRnd.innerHTML = "";
-        objs.autoPlay.checked = autoPlay;
-    }
-
+}
+function resetPlayer() {
+    stopPlay();
+    rndHymns = [];
+    rndAll = false;
+    objs.hymnCc.innerHTML = "Hinário<br>Adventista<br>do Sétimo Dia";
+    objs.hymnInfRnd.innerHTML = "";
+    objs.autoPlay.checked = autoPlay;
 }
 function rndHymn() {
     let rnd = Math.floor(Math.random() * hymnsK.length - 1);
@@ -65,17 +65,25 @@ function rndHymnAll() {
     rndHymns = rndHymns.filter((h) => (h != rndHymns[rnd]));
     objs.autoPlay.checked = rndAll = true;
     objs.hymnInfRnd.innerHTML = "Todos Aleatórios | restam " + rndHymns.length;
+    stopPlay();
     setPlayer(gHymn);
     if(rndHymns.length == 0) {
-        bjs.hymnInfRnd.innerHTML = "";
+        objs.hymnInfRnd.innerHTML = "";
         rndAll = false;
     }
+}
+function timeUpdate() {
+    if(hymns[gHymn][parseInt(audPlay.currentTime)])
+    objs.hymnCc.innerHTML = hymns[gHymn][parseInt(audPlay.currentTime)];
+}
+function ended() {
+    objs.hymnCc.innerHTML = "Hinário<br>Adventista<br>do Sétimo Dia";
+    if(rndAll) rndHymnAll(); else resetPlayer();
 }
 
 function setPlayer(n) {
     gHymn = n;
-    let aud = "classes/audios/" + setAud(n);
-    objs.srcAud.src = aud;
+    setAud();
     objs.hymnTt.innerHTML = n + ". " + hymns[n].tt;
     objs.hymnOt.innerHTML = hymns[n].ot;
     objs.hymnCr.innerHTML = hymns[n].cr;
@@ -84,9 +92,18 @@ function setPlayer(n) {
     if(objs.autoPlay.checked) startPlay();
 
 }
-function setAud(n) {
-    if(objs.audModVo.checked) return n + ".mp4";
-    return n + "_pb.mp4";
+function setAudMode() {
+    cTime = audPlay.currentTime;
+    if(objs.btnPlay.value == "♫ Pausar") audPlay.pause();
+    audPlay = (objs.audModVo.checked ? objs.srcVo: objs.srcPb);
+    audPlay.currentTime = cTime;
+    if(objs.btnPlay.value == "♫ Pausar") startPlay();
+}
+function setAud() {
+    objs.srcVo.src = "classes/audios/" + gHymn + ".mp4";
+    objs.srcVo.preload = "auto";
+    objs.srcPb.src = "classes/audios/" + gHymn + "_pb.mp4";
+    objs.srcPb.preload = "auto";
 }
 function setAutoPlay() {
     autoPlay = objs.autoPlay.checked;
@@ -119,6 +136,7 @@ function hymnsFltList(hf) {
             let li = d.createElement("li");
             li.innerHTML = numb + ". " + hymns[numb].tt;
             li.addEventListener('click', () => {
+                resetPlayer();
                 setPlayer(numb);
             });
             objs.listHymns.appendChild(li);
