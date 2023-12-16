@@ -27,9 +27,10 @@ function setPage(e) {
 }
 
 function setGHymn() {
-    let search;
-    if(search = window.location.search.match(/h=(\d\d\d)/)) {
-        setPlayer(search[1]);
+    let search = window.location.search.match(/h=(\d\d\d)/);
+    if(search && Number(search[1]) > 0 && Number(search[1]) < 614) {
+        gHymn = search[1];
+        setPlayer(gHymn);
     } else {
         rndHymn();
     }
