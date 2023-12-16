@@ -1,5 +1,6 @@
 var elems = {
-    'root_section_secPlayer': [],
+    'body_main_main': [],
+    'main_section_secPlayer': [],
     'secPlayer_div_player': [],
     'player_div_hymnTts': [],
     'hymnTts_h1_hymnTt': [],
@@ -30,6 +31,6 @@ var elems = {
     'pFindHymn_label_labFindMod': [],
     'labFindMod_input_findMod': ['type__checkbox'],
     'labFindMod_span_nameFindMod': ['innerHTML__Somente no título'],
-    'root_section_secOut': [],
+    'main_section_secOut': [],
     'secOut_ul_listHymns': []
 }

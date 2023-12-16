@@ -1,24 +1,91 @@
-function setPage(e, r) {
+function setPage(e) {
+    objs['body'] = d.body;
     for(let k in e) {
         let nK = k.split('_');
         objs[nK[2]] = d.createElement(nK[1]);
         if(e[k].length > 0) {
             for(let v of e[k]) {
                 let nV = v.split('__');
-                if(nV[0] == 'innerHTML') {
-                    objs[nK[2]].innerHTML = nV[1];
-                } else {
-                    objs[nK[2]].setAttribute(nV[0], nV[1]);
-                }
+                objs[nK[2]][nV[0]] = nV[1];
             }
         }
-        if(nK[0] == 'root') {
-            d.querySelector(r).appendChild(objs[nK[2]]);
+        objs[nK[0]].appendChild(objs[nK[2]]);
+    }
+
+    winResp();
+    audPlay = (objs.audModVo.checked ? objs.srcVo: objs.srcPb);
+    if(gHymn == '') rndHymn(); else setPlayer(gHymn);
+    objs.btnPlay.onclick = startPlay;
+    objs.btnRnd.onclick = rndHymn;
+    objs.btnRndAll.onclick = rndHymnAll;
+    objs.audMod.onchange = setAudMode;
+    objs.findMod.onclick = fltHymnsList;
+    objs.autoPlay.onclick = setAutoPlay;
+    objs.findHymn.onkeyup = fltHymnsList;
+    objs.srcVo.ontimeupdate = objs.srcPb.ontimeupdate =  timeUpdate;
+    objs.srcVo.onended = objs.srcPb.onended =  ended;
+}
+
+function fltHymnsList() {
+    let i = 0;
+    fltHymns = [];
+    for(let k in hymns) {
+        fltHymns[i] = k;
+        if(objs.findMod.checked) {
+            fltHymns[i] += " " + fixChar(hymns[k].tt);
         } else {
-            objs[nK[0]].appendChild(objs[nK[2]]);
+            for(let v in hymns[k]) {
+                fltHymns[i] += " " + fixChar(hymns[k][v]);
+            }
+        }
+        i++;
+    }
+    hymnsFltList(objs.findHymn.value);
+}
+function hymnsFltList(hf) {
+    hf = fixChar(hf);
+    objs.listHymns.innerHTML = "";
+    fltHymns.forEach(function(h) {
+        h = fixChar(h);
+        let re = new RegExp(hf, 'i');
+        if(h.match(re) && hf.match(/[^\s.,\-!?*]/))  {
+            let numb = h.replace(/^(\d{3}).*/g, "$1");
+            let li = d.createElement("li");
+            li.innerHTML = numb + ". " + hymns[numb].tt;
+            li.addEventListener('click', () => {
+                resetPlayer();
+                setPlayer(numb);
+            });
+            objs.listHymns.appendChild(li);
+        }
+    });
+}
+function winResp() {
+    let width = window.innerWidth, height = window.innerHeight,
+    psw, psh;
+    if(width < height) {
+        psw = 0.99;
+        psh = 0.30;
+    } else {
+        if((width / height) > 1.5) {
+            psw = 0.55;
+            psh = 0.40;
         }
     }
+    objs.player.style.width = (width * psw) + "px";
+    objs.player.style.height = (height * psh) + "px";
 }
+
+function fixChar(c){
+    return c.toLowerCase()
+        .replace(/à|á|â|ã|ä|å/g, 'a')
+        .replace(/ç/g, 'c')
+        .replace(/è|é|ê|ë/g, 'e')
+        .replace(/ì|í|î|ï/g, 'i')
+        .replace(/ñ/g, 'n')
+        .replace(/ò|ó|ô|õ|ö/g, 'o')
+        .replace(/ù|ú|û|ü/g, 'u');
+};
 
 function startPlay() {
     audPlay.play().then(() => {
@@ -100,58 +167,11 @@ function setAudMode() {
     if(objs.btnPlay.value == "♫ Pausar") startPlay();
 }
 function setAud() {
-    objs.srcVo.src = "classes/audios/" + gHymn + ".mp4";
+    objs.srcVo.src = "https://archive.org/download/JMS-HASD/audio/" + gHymn + ".mp4";
     objs.srcVo.preload = "auto";
-    objs.srcPb.src = "classes/audios/" + gHymn + "_pb.mp4";
+    objs.srcPb.src = "https://archive.org/download/JMS-HASD/audio/" + gHymn + "_pb.mp4";
     objs.srcPb.preload = "auto";
 }
 function setAutoPlay() {
     autoPlay = objs.autoPlay.checked;
 }
-
-function fltHymnsList() {
-    let i = 0;
-    fltHymns = [];
-    for(let k in hymns) {
-        fltHymns[i] = k;
-        if(objs.findMod.checked == true) {
-            fltHymns[i] += " " + fixChar(hymns[k].tt);
-        } else {
-            for(let v in hymns[k]) {
-                fltHymns[i] += " " + fixChar(hymns[k][v]);
-            }
-        }
-        i++;
-    }
-    hymnsFltList(objs.findHymn.value);
-}
-function hymnsFltList(hf) {
-    hf = fixChar(hf);
-    objs.listHymns.innerHTML = "";
-    fltHymns.forEach(function(h) {
-        h = fixChar(h);
-        let re = new RegExp(hf, 'i');
-        if(h.match(re) && hf.match(/[^\s.,\-!?*]/))  {
-            let numb = h.replace(/^(\d{3}).*/g, "$1");
-            let li = d.createElement("li");
-            li.innerHTML = numb + ". " + hymns[numb].tt;
-            li.addEventListener('click', () => {
-                resetPlayer();
-                setPlayer(numb);
-            });
-            objs.listHymns.appendChild(li);
-        }
-    });
-}
-
-function fixChar(c){
-    return c.toLowerCase().
-        replace(/à|á|â|ã|ä|å/g, 'a').
-        replace(/ç/g, 'c').
-        replace(/è|é|ê|ë/g, 'e').
-        replace(/ì|í|î|ï/g, 'i').
-        replace(/ñ/g, 'n').
-        replace(/ò|ó|ô|õ|ö/g, 'o').
-        replace(/ù|ú|û|ü/g, 'u');
-};
-
