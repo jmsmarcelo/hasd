@@ -14,7 +14,7 @@ function setPage(e) {
 
     winResp();
     audPlay = (objs.audModVo.checked ? objs.srcVo: objs.srcPb);
-    if(gHymn == '') rndHymn(); else setPlayer(gHymn);
+    setGHymn();
     objs.btnPlay.onclick = startPlay;
     objs.btnRnd.onclick = rndHymn;
     objs.btnRndAll.onclick = rndHymnAll;
@@ -24,6 +24,15 @@ function setPage(e) {
     objs.findHymn.onkeyup = fltHymnsList;
     objs.srcVo.ontimeupdate = objs.srcPb.ontimeupdate =  timeUpdate;
     objs.srcVo.onended = objs.srcPb.onended =  ended;
+}
+
+function setGHymn() {
+    let search;
+    if(search = window.location.search.match(/h=(\d\d\d)/)) {
+        setPlayer(search[1]);
+    } else {
+        rndHymn();
+    }
 }
 
 function fltHymnsList() {
