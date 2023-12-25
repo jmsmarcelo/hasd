@@ -146,7 +146,7 @@ var hymns = {
         "134": "Ao Deus de Abraão e meu,<br>no além irei louvar.<br>Eternamente eu louvarei<br>ao Deus sem-par."
     },
     "012": {
-        "tt": "",
+        "tt": "Vinde, Povo do Senhor",
         "ot": "Come, Ye Thankful People",
         "cr": "Henry Alford (1810-1871)<br>George Job Elvey (1816-1893)",
         "bv": "Salmo 95:1-6",
@@ -159,7 +159,7 @@ var hymns = {
         "116": "Mal e dor ficando atrás,<br>reinará amor e paz.<br>Vinde, povo do Senhor,<br> aclamai o Redentor."
     },
     "013": {
-        "tt": "",
+        "tt": "Louvamos-Te, ó Deus",
         "ot": "Revive Us Again",
         "cr": "William Paton MacKay (1837-1885)<br>John Jenkins Husband (1760-1825)",
         "bv": "Salmo 113:1 e 2",
@@ -178,7 +178,7 @@ var hymns = {
         "118": "Aleluia! Tua graça<br>Imploramos. Amém."
     },
     "014": {
-        "tt": "",
+        "tt": "Jubilosos Te Adoramos",
         "ot": "Joyful, Joyful, We Adore Thee",
         "cr": "Henry van Dyke (1852-1933)<br>Ludwig van Beethoven (1770-1827)",
         "bv": "Salmo 105:1-3",
@@ -197,7 +197,7 @@ var hymns = {
         "125": "Aleluia ao Pai eterno,<br>Deus da graça, Deus da paz!"
     },
     "015": {
-        "tt": "",
+        "tt": "Vós, Criaturas do Senhor",
         "ot": "All Creatures of Our God and King",
         "cr": "Francisco de Assis (1182-1226)<br>GEISTLICHE KIRCHENGESÃNGE, 1626",
         "bv": "Salmo 148",
@@ -213,7 +213,7 @@ var hymns = {
         "136": "Aleluia! Aleluia! Aleluia!"
     },
     "016": {
-        "tt": "",
+        "tt": "A Deus Demos Glória",
         "ot": "To God Be the Glory",
         "cr": "Fanny Jane Crosby (1820-1915)<br>William Howard Doane (1832-1915)",
         "bv": "Salmo 107:21 e 22",
@@ -232,7 +232,7 @@ var hymns = {
         "176": "A Deus demos glória,<br>porquanto do Céu<br>Seu Filho bendito por nós todos deu."
     },
     "017": {
-        "tt": "",
+        "tt": "Nós Te Adoramos",
         "ot": "Nous T'adorons, Dieu Vivant",
         "cr": "Edmont Louis Budry (1854-1932)<br>Franz Joseph Haydn (1732-1809)",
         "bv": "Salmo 95:6",
@@ -248,7 +248,7 @@ var hymns = {
         "151": "Glória rendemos, honra, louvor,<br>E adoração, ó Consolador!"
     },
     "018": {
-        "tt": "",
+        "tt": "Santo! Santo! Santo!",
         "ot": "Holy, Holy, Holy",
         "cr": "Reginald Heber (1783-1826)<br>John Bacchus Dykes (1823-1876)",
         "bv": "Isaías 6:1-3",
@@ -261,7 +261,7 @@ var hymns = {
         "136": "Antes de criares todo o Céu e a Terra,<br>Eras e sempre hás de ser, Senhor."
     },
     "019": {
-        "tt": "",
+        "tt": "Ao Coro dos Arcanjos",
         "ot": "Pour Chanter les Louanges",
         "cr": "ECOLES DU DIMANCHE<br>Wolfgang Amadeus Mozart (1756-1791)",
         "bv": "Salmo 92:1-4",
@@ -274,7 +274,7 @@ var hymns = {
         "112": "Eu ouço a natureza, feliz, rejubilar,<br>E sinto da harmonia a paz me confortar."
     },
     "020": {
-        "tt": "",
+        "tt": "A Ti Toda Glória",
         "ot": "We Gather Together",
         "cr": "<br>Melodia Tradicional Holandesa",
         "bv": "I Pedro 1:3-5",
@@ -287,7 +287,7 @@ var hymns = {
         "86": "Sua morte nos trouxe perdão e<br>eternidade,<br>E abriu-nos os portais para o reino<br>de luz."
     },
     "021": {
-        "tt": "",
+        "tt": "Vigiar e Orar",
         "ot": "",
         "cr": "Alfredo Henrique da Silva(1872-1950)<br>Sophia Zuberbuhler(1833-1893)",
         "bv": "Salmo 55:16 e 17",
@@ -306,7 +306,7 @@ var hymns = {
         "168": "Bem de manhã, e sem cessar,<br>Vigiar, sim, e orar."
     },
     "022": {
-        "tt": "",
+        "tt": "Bem de Manhã",
         "ot": "Still, Still With Thee",
         "cr": "Harriet Elizabeth Beecher Stowe (1812-1896)<br>Felix Mendelssohn-Bartholdy (1809-1847)",
         "bv": "Salmo 59:16",
@@ -319,7 +319,7 @@ var hymns = {
         "134": "Vem conceder, em Teu amor<br>profundo,<br>Luz, proteção, descanso em Ti, Senhor."
     },
     "023": {
-        "tt": "",
+        "tt": "De Manhã Bem Cedo Busco",
         "ot": "I Will Early Seek the Saviour",
         "cr": "Sra, L. M. B. Bateman<br>Frederick Augustus Filmore (1856- ?)",
         "bv": "Salmo 5:3",
@@ -338,7 +338,7 @@ var hymns = {
         "128": "Tenho a prova no Calvário;<br>Para sempre amá-Lo-ei"
     },
     "024": {
-        "tt": "",
+        "tt": "Desponta o Sol",
         "ot": "Lord, in the Morning",
         "cr": "Isaac Watts (1674-1748)<br>Aaron Williams (1731-1776)",
         "bv": "Salmo 5:1-3",
@@ -351,7 +351,7 @@ var hymns = {
         "92": "Que eu possa, então, brilhando em luz<br>Subir ao lar de amor."
     },
     "025": {
-        "tt": "",
+        "tt": "Bendito Seja Deus",
         "ot": "When Morning Gilds the Skies",
         "cr": "KATOLICHES GESANGBUCH, 1828<br>Joseph Barnby (1838-1896)",
         "bv": "Salmo 113:1 e 2",
@@ -366,7 +366,7 @@ var hymns = {
         "136": "Cantai, ó cristandade,<br>Por toda a eternidade:<br>Bendito seja Deus!"
     },
     "026": {
-        "tt": "",
+        "tt": "Luzes da Aurora",
         "ot": "Light After Darkness",
         "cr": "Em. Bonnard<br>Ira David Sankey (1840-1908)",
         "bv": "Provérbios 4:18",
@@ -379,7 +379,7 @@ var hymns = {
         "101": "Felicidade na retidão,<br>E santidade de coração."
     },
     "027": {
-        "tt": "",
+        "tt": "Perto do Lar",
         "ot": "Nearer Home",
         "cr": "<br>James McGgranahan (1840-1907)",
         "bv": "Romanos 13:11",
@@ -404,7 +404,7 @@ var hymns = {
         "225": "Desse tão lindo lar<br>Com fontes de cristal,<br>Do país do eterno Deus."
     },
     "028": {
-        "tt": "",
+        "tt": "Morre o Dia",
         "ot": "Day Is Dying in the West",
         "cr": "Mary artemisia Lathbury (1841-1913)<br>William Fisk Sherwin (1826-1888)",
         "bv": "Lucas 24:28 e 29",
@@ -423,7 +423,7 @@ var hymns = {
         "227": "Toda a Terra e altos Céus<br>Dão-Te graças e louvor,<br>A Ti, Senhor."
     },
     "029": {
-        "tt": "",
+        "tt": "Já o Dia Longe Vai",
         "ot": "Softly Now the Light of Day",
         "cr": "George Washington Doane (1799-1859)<br>Carl Maria von Weber (1786-1826)",
         "bv": "Salmo 42:8",
@@ -436,7 +436,7 @@ var hymns = {
         "88": "Quero, pois, em Ti, meu Deus,<br>Repousar dos fardos meus."
     },
     "030": {
-        "tt": "",
+        "tt": "Hora Feliz do Pôr do Sol",
         "ot": "How Sweet the Light",
         "cr": "James Edmeston (1791-1867)<br>Timothy Richard Matthews (1826-1910)",
         "bv": "Salmo 4:8",
@@ -449,7 +449,7 @@ var hymns = {
         "84": "Dá-nos, ó Deus, o Teu perdão,<br>Graça e poder, ó bom Senhor!"
     },
     "031": {
-        "tt": "",
+        "tt": "Sublime Amor",
         "ot": "The Love of God",
         "cr": "F. M. L.<br>Frederick M. Lehman (1868-1953)",
         "bv": "João 15:13",
@@ -474,7 +474,7 @@ var hymns = {
         "207": "Por esse amor, eternamente,<br>A Deus iremos louvar.",
     },
     "032": {
-        "tt": "",
+        "tt": "Deus é Nosso Pai Amado",
         "ot": "God in Heaven In Your Father",
         "cr": "H. G.<br>Helen Griggs",
         "bv": "Mateus 6:26-30",
@@ -493,7 +493,7 @@ var hymns = {
         "192": "Dá ao lírio tanta glória!<br>Sim, te atenderá também."
     },
     "033": {
-        "tt": "",
+        "tt": "Castelo Forte",
         "ot": "Ein' feste Burg ist unser Gott",
         "cr": "M. L.<br>Martinho Lutero (1483-1546)",
         "bv": "Salmo 46:1",
@@ -514,7 +514,7 @@ var hymns = {
         "258": "Embora a vida vá, por nós Jesus está<br>E dar-nos-á Seu reino."
     },
     "034": {
-        "tt": "",
+        "tt": "Quão Grande És Tu",
         "ot": "How Great Thou Art",
         "cr": "Carl Boberg (1859-1940) e Stuart K. Hine (1899-1989)<br>Melodia Tradicional Sueca",
         "bv": "Salmo 8",
@@ -533,7 +533,7 @@ var hymns = {
         "223": "Então minh'alma canta a Ti, Senhor:<br>Quão grande és Tu! Quão grande és Tu!"
     },
     "035": {
-        "tt": "",
+        "tt": "Tu És Fiel, Senhor",
         "ot": "Great Is Thy Fainthfulness",
         "cr": "Thomas Obediah Chisholm (1866-1960)<br>William Marion Runyan (1870-1957)",
         "bv": "Lamentações 3:22 e 23",
@@ -552,7 +552,7 @@ var hymns = {
         "240": "Tua mercê nos sustenta e nos guarda;<br>Sim, para sempre, ó Deus, fiel serás."
     },
     "036": {
-        "tt": "",
+        "tt": "O Mundo é de Meu Deus",
         "ot": "This Is My Father's World",
         "cr": "Maltbie Davenport Babcock (1858-1901)<br>Franklin Lawrence Sheppard (1852-1930)",
         "bv": "Salmo 24:1",
@@ -571,7 +571,7 @@ var hymns = {
         "134": "Para esta Terra resgatar,<br>a vida deu na cruz."
     },
     "037": {
-        "tt": "",
+        "tt": "Tudo Que Há em Terra e Mar",
         "ot": "All Things Bright and Beautful",
         "cr": "Cecil Frances Alexander (1818-1895)<br>Melodia Tradicional Inglesa",
         "bv": "Salmo 19:1-5",
@@ -592,7 +592,7 @@ var hymns = {
         "145": "Tudo que o bom Deus criou<br>Traz honra ao nome Seu."
     },
     "038": {
-        "tt": "",
+        "tt": "Encanto sem Igual",
         "ot": "The Wonder of It All",
         "cr": "G. B. S.<br>George Beverly Shea (1909- )",
         "bv": "I João 3:1",
@@ -607,7 +607,7 @@ var hymns = {
         "123": "Há encanto sem igual,<br>encanto sem igual,<br>Em ter Deus amor por mim."
     },
     "039": {
-        "tt": "",
+        "tt": "O Céu Azul",
         "ot": "The Spacious Firmament",
         "cr": "Joseph Addison (1672-1719)<br>Franz Joseph Haydn (1732-1809)",
         "bv": "Salmo 19:1-4",
@@ -622,7 +622,7 @@ var hymns = {
         "124": "E vós, nações, clamai também!<br>Louvai a Deus, Senhor! Amém."
     },
     "040": {
-        "tt": "",
+        "tt": "Filhos do Pai Celeste",
         "ot": "Children of the Heavenly Father",
         "cr": "Carolina Vilhelmina Sandeli-Berg (1832-1903)<br>Melodia Tradicional Sueca",
         "bv": "Salmo 103:13",
@@ -635,7 +635,7 @@ var hymns = {
         "64": "Seu desejo é guardá-los<br>Puros, santos para a vida."
     },
     "041": {
-        "tt": "",
+        "tt": "Glória ao Rei Que Vos Nasceu",
         "ot": "Hark! the Herald Angels Sing",
         "cr": "Charles Wesley (1707-1788)<br>Felix Mendelssohn-Bartholdy (1809-1847)",
         "bv": "Lucas 2:13 e 14",
@@ -657,7 +657,7 @@ var hymns = {
         "165": "Já soou por todo o céu:<br>\"Glória ao Rei que vos nasceu!\""
     },
     "042": {
-        "tt": "",
+        "tt": "Noite de Paz",
         "ot": "Stile Nacht",
         "cr": "Joseph Möhr (1792-1848)<br>Franz Xavier Gruber (1787-1863)",
         "bv": "Lucas 2:4-7",
@@ -670,7 +670,7 @@ var hymns = {
         "141": "Vinde todos Lhe pedir<br>Que nos venha conduzir;<br>Deste mundo, a luz é o Senhor Jesus."
     },
     "043": {
-        "tt": "",
+        "tt": "Soou em Meio à Noite Azul",
         "ot": "It Came Upon the Midnight Clear",
         "cr": "Edmund Hamilton Sears (1810-1876)<br>Richard Storrs Willis (1819-1900)",
         "bv": "Lucas 2:13 e 14",
@@ -689,7 +689,7 @@ var hymns = {
         "126": "No lar possamos nós também<br>cantar a salvação!"
     },
     "044": {
-        "tt": "",
+        "tt": "Natal! Feliz Natal!",
         "ot": "The First Noel",
         "cr": "<br>Melodia Tradicional Inglesa",
         "bv": "Mateus 2:9-11",
@@ -708,7 +708,7 @@ var hymns = {
         "150": "Eis que nasceu<br>Nosso Rei divinal!"
     },
     "045": {
-        "tt": "",
+        "tt": "Nasce Jesus",
         "ot": "",
         "cr": "Robert Hawkey Moreton (1844-1917)<br>Robert Lowry (1826-1899)",
         "bv": "Lucas 2:8-14",
@@ -729,7 +729,7 @@ var hymns = {
         "156": "Paz na Terra, aos homens<br>A quem quer Ele bem."
     },
     "046": {
-        "tt": "",
+        "tt": "Estrela de Luz",
         "ot": "'Tis Shining Still",
         "cr": "F. E. B.<br>Francklin Edson Belden (1858-1945)",
         "bv": "Mateus 2:1 e 2",
@@ -748,7 +748,7 @@ var hymns = {
         "112": "Brilhando inda está,<br>brilhando inda está,<br>A estrela a indicar o Deus Salvador."
     },
     "047": {
-        "tt": "",
+        "tt": "Belém, Bendita És",
         "ot": "O Little Town of Bethlehem",
         "cr": "Philips Brooks (1835-1893)<br>Lewis Henry Redner (1830-1908)",
         "bv": "Miqueias 5:2",
@@ -761,7 +761,7 @@ var hymns = {
         "122": "A voz dos anjos soa, a paz a proclamar.<br>Jesus, agora mesmo vem, sim,<br>vem em nós morar."
     },
     "048": {
-        "tt": "",
+        "tt": "Ó Vinde, Adoremos",
         "ot": "O Come, All Ye Faithful",
         "cr": "Hino Latino, séc. XVIII<br>CANTUS DIVERSI, 1751",
         "bv": "Mateus 2:11",
@@ -780,7 +780,7 @@ var hymns = {
         "174": "Ó vinde, adoremos<br>O Rei Salvador!"
     },
     "049": {
-        "tt": "",
+        "tt": "Surgem Anjos Proclamando",
         "ot": "Angels We Have Heard on High",
         "cr": "Melodia Tradicional Francesa",
         "bv": "Lucas 2:13 e 14",
@@ -799,7 +799,7 @@ var hymns = {
         "195": "Glória, glória a Deus nas alturas!<br>Glória, glória a Deus nas alturas!"
     },
     "050": {
-        "tt": "",
+        "tt": "Num Berço de Palha",
         "ot": "Away in a Manger",
         "cr": "LITTE CHILDRENS BOOK, 1885<br>James Ramsey Murray (1841-1905)",
         "bv": "Lucas 2:15 e 16",
@@ -812,7 +812,7 @@ var hymns = {
         "98": "Contigo queremos pra sempre ficar,<br>Ó dá-nos entrada no Teu doce lar."
     },
     "051": {
-        "tt": "",
+        "tt": "Clara Noite",
         "ot": "Lord, Dismiss Us With Thy Blessing",
         "cr": "Dario Pires de Araújo (1937- )<br>Melodia Tradicional Siciliana",
         "bv": "Lucas 2:4-7",
@@ -825,7 +825,7 @@ var hymns = {
         "111": "Todos cantemos: \"Deus conosco,<br>Noite feliz, feliz Natal!\"."
     },
     "052": {
-        "tt": "",
+        "tt": "Vestido em Linho",
         "ot": "Ivory Palaces",
         "cr": "H. B.<br>Henry Barraclough (1891-1983)",
         "bv": "Salmo 45:8",
@@ -844,7 +844,7 @@ var hymns = {
         "178": "Glória não quis; em dor morreu.<br>A cruz suportou por mim."
     },
     "053": {
-        "tt": "",
+        "tt": "Conta-me a História de Cristo",
         "ot": "Tell Me the Story of Jesus",
         "cr": "Fanny Jane Crosby (1820-1915)<br>John Robson Sweney (1837-1899)",
         "bv": "Isaías 53:4 e 5",
@@ -869,7 +869,7 @@ var hymns = {
         "199": "Conta-me a história preciosa;<br>Conta-me com emoção!"
     },
     "054": {
-        "tt": "",
+        "tt": "A Doce História",
         "ot": "I Love to Tell the Story",
         "cr": "Arabella Katherine Hankey (1834-1911)<br>William Gustavus Fischer (1835-1912)",
         "bv": "Isaías 53:5",
@@ -888,7 +888,7 @@ var hymns = {
         "213": "De Sua eterna graça,<br>De Seu imenso amor!"
     },
     "055": {
-        "tt": "",
+        "tt": "Cantarei a Linda História",
         "ot": "I Will Sing the Wondrous Story",
         "cr": "Trancis Harold Rowley (1854-1952)<br>Peter Philip Bilhorn (1865-1936)",
         "bv": "I Timóteo 1:14 e 15",
@@ -907,7 +907,7 @@ var hymns = {
         "132": "Com fervor, na Sua glória,<br>Louvarei ao Salvador."
     },
     "056": {
-        "tt": "",
+        "tt": "As Mãos do Senhor",
         "ot": " ",
         "cr": "William Charies Poole (1875-1949)<br>Bentley DeForest Ackley (1872-1958)",
         "bv": "João 20:27",
@@ -926,7 +926,7 @@ var hymns = {
         "129": "Mãos que serviram em santo labor,<br>Mãos que inda velam por ti!"
     },
     "057": {
-        "tt": "",
+        "tt": "Eu Quisera Andar com Cristo",
         "ot": " ",
         "cr": "F. G. J.<br>Frederico Gerling Jr. (1925- )",
         "bv": "Mateus 13:17",
@@ -949,7 +949,7 @@ var hymns = {
         "236": "Bem sei, Senhor, que um dia a sentirei,<br>Bem junto a Ti, Jesus, no eterno lar."
     },
     "058": {
-        "tt": "",
+        "tt": "Conta-me a Velha História",
         "ot": "Tell Me the Old, Old Story",
         "cr": "Aravella Katherine Hankey (1834-1911)<br>William Howard Doane (1832-1915)",
         "bv": "João 3:16",
@@ -968,7 +968,7 @@ var hymns = {
         "187": "Conta-me, pois, a história<br>Do meigo Salvador!"
     },
     "059": {
-        "tt": "",
+        "tt": "'Stavas Lá?",
         "ot": "Were You There?",
         "cr": "<br>Negro Spiritual",
         "bv": "Marcos 15:21-25",
